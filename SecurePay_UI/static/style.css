@@ -1,0 +1,209 @@
+/*  General Styling */
+body, .stApp {
+    background-color: #EEF2FF !important; /* Light soft blue */
+    color: #1E293B !important; /* Dark navy */
+    font-family: 'Poppins', sans-serif;
+}
+
+/*  Sidebar - Enhanced Color */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1E3A8A, #3B82F6) !important; /* Gradient Blue */
+    color: white !important;
+    font-weight: bold;
+}
+header {
+    background-color: #1E3A8A !important; /* Deep blue */
+}
+/* Forcefully change the error message text color to black */
+div[data-testid="stAlert"], div[data-baseweb="alert-error"] {
+    background-color: rgba(255, 0, 0, 0.2) !important; /* Light Red Background */
+    color: black !important; /* Black Text */
+    border-left: 5px solid red !important;
+    padding: 15px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+/* Override internal text inside error boxes */
+div[data-testid="stAlert"] * {
+    color: black !important; /* Force all inner text to black */
+}
+
+
+/* 🔹 Ensure high contrast on dark mode */
+@media (prefers-color-scheme: dark) {
+    div[data-testid="stNotification"], div.stAlert, div[data-baseweb="toast"] {
+        background-color: #3E2723 !important;
+        color: #FFCDD2 !important;
+        border-left: 6px solid #FF5252 !important;
+    }
+}
+
+
+
+ /* Sidebar Text */
+/* [data-testid="stSidebar"] * {
+    color: white !important;
+} */
+
+/* 🔘 Buttons - Animated */
+button {
+    background-color: #2563EB !important; /* Vivid Blue */
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+button:hover {
+    background-color: #1E40AF !important; /* Darker blue */
+    transform: scale(1.1) !important;
+}
+
+/* 🎬 Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stApp {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/*Styling the app.py */
+/* Center title and text */
+/* Center title and text */
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Align tagline properly below title */
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: -10px;
+    color: #555;
+}
+
+/* Smaller card for "How it Works" */
+.how-it-works {
+    background-color: #f8f9fc; /* Light background */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 50%;
+    margin: auto;
+}
+
+/* Reduce spacing inside the card */
+.how-it-works ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.how-it-works li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Make "Get Started" bigger and centered */
+.get-started {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin: 25px 0;
+}
+
+Signup -page styling
+/* Title Styling */
+/* Title Styling */
+/* .signup-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0a58ca;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Subtitle Styling */
+.signup-subtext {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Label Styling */
+.signup-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333 !important;  /* Fix White Text Issue */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Reduce Space Between Fields */
+div[data-testid="stTextInput"] {
+    margin-bottom: 10px !important;
+}
+
+/* Fix Input Fields */
+div[data-testid="stTextInput"] input {
+    background-color: white !important;
+    border-radius: 6px !important;
+    border: 1px solid #ccc !important;
+    padding: 10px;
+    width: 100%;
+    color: #333 !important;
+    font-size: 14px;
+} */
+
+/* Signup Button */
+/* button[kind="primary"] {
+    background-color: #0a58ca !important;
+    color: white !important;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[kind="primary"]:hover {
+    background-color: #084298 !important;
+    transform: scale(1.05) !important;
+} */
+
+/* Remove Floating Box Issue */
+.stMarkdown {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+   /* Style for Buttons in Sidebar */
+   div.stButton > button {
+    background: linear-gradient(180deg, #1E3A8A, #3B82F6) !important; /* Blue */
+    color: white !important; /* Text color */
+    border-radius: 10px !important; /* Rounded corners */
+    padding: 10px !important;
+    width: 100% !important; /* Full width */
+    border: none !important;
+    font-size: 16px !important;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+div.stButton > button:hover {
+    background-color: #1E40AF !important; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+}
+
+
+
