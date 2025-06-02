@@ -2,7 +2,7 @@
 import razorpay
 
 def create_order(amount):
-    client = razorpay.Client(auth=("rzp_test_SQeAHlHYsiQuSk", "DO22Ljdt0PCYOJ34UNrPHV1H"))
+    client = razorpay.Client(auth=(""YOUR_API_ID", "YOUR_API_KEY"))
 
     data = {
         "amount": amount,  # Amount in paise (e.g., 1999 = ₹19.99)
