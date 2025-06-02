@@ -14,7 +14,7 @@ if "payment_success" in st.query_params:
         update_payment_status(username)
         time.sleep(1) 
 
-    # ✅ Ensure session state updates
+    #Ensure session state updates
     st.session_state["paid"] = True
     st.session_state["user_plan"] = "Paid"
     st.session_state["payment_status"] = "Paid"
@@ -102,7 +102,7 @@ def show():
                         </button>
                         <script>
                             var options = {{
-                                "key": "rzp_test_SQeAHlHYsiQuSk",
+                                "key": "YOUR_API_KEY",
                                 "amount": "{plan["amount"]}00",
                                 "currency": "INR",
                                 "name": "{plan["title"]}",
@@ -116,7 +116,7 @@ def show():
                                     .then(response => response.json())
                                     .then(data => {{
                                         if (data.success) {{
-                                            window.location.href = "/?payment_success=true";  // ✅ Correct redirection
+                                            window.location.href = "/?payment_success=true"; 
                                         }}
                                     }});
                                 }},
