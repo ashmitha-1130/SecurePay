@@ -1,6 +1,6 @@
 import streamlit as st
 import database  # Import the database functions
-from site_pages.pricing import show  # Assuming 'show()' is defined in pricing.py
+from site_pages import pricing # Assuming 'show()' is defined in pricing.py
 
 import time
 
