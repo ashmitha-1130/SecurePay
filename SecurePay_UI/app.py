@@ -6,9 +6,13 @@ import time
 
 # Function to load custom CSS
 def load_css(file_name):
-    with open(file_name, "r", encoding="utf-8") as f:  
-        css = f.read()
-    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+    try:
+        with open(file_name, "r", encoding="utf-8") as f:
+            css = f.read()
+        st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.warning("⚠️ CSS file not found. Using default styles.")
+
 
 # Setting page title and layout
 st.set_page_config(page_title="SecurePay-UPI Fraud Detection", page_icon="🕵️‍♂️", layout="wide")
